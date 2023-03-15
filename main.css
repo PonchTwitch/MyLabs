@@ -10,6 +10,17 @@ header {
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+    transition: 1s;
+}
+
+header:hover {
+    font-size: 30px;
+    color: black;
+}
+
+header:active {
+    font-size: 60px;
+
 }
 
 footer {
@@ -18,6 +29,17 @@ footer {
     padding: 10px;
     font-style: italic;
     text-align: right;
+    transition: 1s;
+}
+
+footer:hover {
+    font-size: 30px;
+    color: black;
+}
+
+footer:active {
+    font-size: 60px;
+
 }
 
 a {
@@ -27,7 +49,7 @@ a {
 }
 
 a:visited {
-    color:purple
+    color:purple;
 }
 a:hover {
     color: red;
