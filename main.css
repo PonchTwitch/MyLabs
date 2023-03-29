@@ -30,6 +30,9 @@ footer {
     font-style: italic;
     text-align: right;
     transition: 1s;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 footer:hover {
