@@ -47,6 +47,14 @@
             let author = 'Hello world!!! \nАвтор страницы: \nСалманов Юнус Арзу оглы';
             alert(author);
         }
+
+        function changeOutput(buttonNum, backColor, textColor, borderColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderColor = borderColor
+        }
     </script>
     <style>
         .message {
@@ -60,6 +68,12 @@
             height: 20px;
             cursor: pointer;
             display: inline-block;
+        }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -78,6 +92,15 @@
         <div class="message" onclick="showMulti()">Найти произведение чисел</div>
 
         <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'green')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'orange')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'green', 'yellow', 'blue')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'yellow', 'red', 'green')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="showAuthor()">
