@@ -23,6 +23,10 @@ header:active {
 
 }
 
+main {
+    margin: 10px 20px;
+}
+
 footer {
     background-image: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, purple); 
     color:lightgreen;
