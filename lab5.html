@@ -71,37 +71,10 @@
             output2.innerHTML = 'Общая стоимость: ' + result + ' р';
         }
         
-        function displayNonecircle1 () {
-            document.getElementById('circle1').style.display = "none";
+        function displayNonecircle (circ) {
+            document.getElementById(circ).style.display = "none";
         }
-        function displayNonecircle2 () {
-            document.getElementById('circle2').style.display = "none";
-        }
-        function displayNonecircle3 () {
-            document.getElementById('circle3').style.display = "none";
-        }
-        function displayNonecircle4 () {
-            document.getElementById('circle4').style.display = "none";
-        }
-        function displayNonecircle5 () {
-            document.getElementById('circle5').style.display = "none";
-        }
-        function displayNonecircle6 () {
-            document.getElementById('circle6').style.display = "none";
-        }
-        function displayNonecircle7 () {
-            document.getElementById('circle7').style.display = "none";
-        }
-        function displayNonecircle8 () {
-            document.getElementById('circle8').style.display = "none";
-        }
-        function displayNonecircle9 () {
-            document.getElementById('circle9').style.display = "none";
-        }
-        function displayNonecircle10 () {
-            document.getElementById('circle10').style.display = "none";
-        }
-
+       
     </script>
     <style>
         .message {
@@ -161,16 +134,16 @@
             <div style="margin: 10px; padding: 7px;" id="output2"></div>
         </div>
 
-        <div id="circle1" onclick="displayNonecircle1 ()" style="background-color: red; position: absolute; top: 760px; left: 10px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 1 </div>
-        <div id="circle2" onclick="displayNonecircle2 ()" style="background-color: blue; position: absolute; top: 760px; left: 76px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 2 </div>
-        <div id="circle3" onclick="displayNonecircle3 ()" style="background-color: yellow; position: absolute; top: 760px; left: 142px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 3 </div>
-        <div id="circle4" onclick="displayNonecircle4 ()" style="background-color: green; position: absolute; top: 760px; left: 208px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 4 </div>
-        <div id="circle5" onclick="displayNonecircle5 ()" style="background-color: purple; position: absolute; top: 760px; left: 274px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 5 </div>
-        <div id="circle6" onclick="displayNonecircle6 ()" style="background-color: pink; position: absolute; top: 760px; left: 340px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 6 </div>
-        <div id="circle7" onclick="displayNonecircle7 ()" style="background-color: orange; position: absolute; top: 760px; left: 406px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 7 </div>
-        <div id="circle8" onclick="displayNonecircle8 ()" style="background-color: white; position: absolute; top: 760px; left: 472px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 8 </div>
-        <div id="circle9" onclick="displayNonecircle9 ()" style="background-color: lightgreen; position: absolute; top: 760px; left: 538px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 9 </div>
-        <div id="circle10" onclick="displayNonecircle10 ()" style="background-color: aqua; position: absolute; top: 760px; left: 604px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 10 </div>
+        <div id="circle1" onclick="displayNonecircle ('circle1')" style="background-color: red; position: absolute; top: 760px; left: 10px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 1 </div>
+        <div id="circle2" onclick="displayNonecircle ('circle2')" style="background-color: blue; position: absolute; top: 760px; left: 76px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 2 </div>
+        <div id="circle3" onclick="displayNonecircle ('circle3')" style="background-color: yellow; position: absolute; top: 760px; left: 142px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 3 </div>
+        <div id="circle4" onclick="displayNonecircle ('circle4')" style="background-color: green; position: absolute; top: 760px; left: 208px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 4 </div>
+        <div id="circle5" onclick="displayNonecircle ('circle5')" style="background-color: purple; position: absolute; top: 760px; left: 274px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 5 </div>
+        <div id="circle6" onclick="displayNonecircle ('circle6')" style="background-color: pink; position: absolute; top: 760px; left: 340px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 6 </div>
+        <div id="circle7" onclick="displayNonecircle ('circle7')" style="background-color: orange; position: absolute; top: 760px; left: 406px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 7 </div>
+        <div id="circle8" onclick="displayNonecircle ('circle8')" style="background-color: white; position: absolute; top: 760px; left: 472px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 8 </div>
+        <div id="circle9" onclick="displayNonecircle ('circle9')" style="background-color: lightgreen; position: absolute; top: 760px; left: 538px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 9 </div>
+        <div id="circle10" onclick="displayNonecircle ('circle10')" style="background-color: aqua; position: absolute; top: 760px; left: 604px; border: 3px solid; border-radius: 30px; width: 50px; height: 50px; font-size: 43px; text-align: center;"> 10 </div>
     </main>
 
     <footer onclick="showAuthor()">
