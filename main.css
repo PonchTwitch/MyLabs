@@ -35,7 +35,8 @@ footer {
     text-align: right;
     transition: 1s;
     position: fixed;
-    width: 100%;
+    left: 0;
+    right: 0;
     bottom: 0;
 }
 
