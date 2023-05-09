@@ -26,6 +26,16 @@
         margin: 40px auto;
         font-weight: bold;
     }
+
+    .color {
+        background-color: yellow;
+        border: 2px solid;
+        border-radius: 20px;
+        width: 250px;
+        padding: 10px;
+        margin: 40px auto;
+        text-align: center;
+    }
 </style>
 <script>
     let number;
@@ -79,12 +89,38 @@
         screens[1].style.display = 'none';
         screens[0].style.display = 'block';
     }
+    function changecolor(div) {
+        if (div.style.backgroundColor == 'yellow') {
+            div.style.backgroundColor = 'red';
+            document.getElementById('color-name').innerHTML = 'красный';
+        }
+        else if (div.style.backgroundColor == 'red') {
+            div.style.backgroundColor = 'black';
+            div.style.color = 'white';
+            document.getElementById('color-name').innerHTML = 'черный';
+        }
+        else if (div.style.backgroundColor == 'black') {
+            div.style.backgroundColor = 'pink';
+            div.style.color = 'black';
+            document.getElementById('color-name').innerHTML = 'розовый';
+        }
+        else if (div.style.backgroundColor == 'pink') {
+            div.style.backgroundColor = 'green';
+            div.style.color = 'white';
+            document.getElementById('color-name').innerHTML = 'зеленый';
+        }
+        else {
+            div.style.backgroundColor = 'yellow';
+            document.getElementById('color-name').innerHTML = 'желтый';
+            div.style.color = 'black'
+        }
+    }
 </script>
 </head>
 
 <body>
     <header>
-        НГТУ, ФБ, Лабораторная работа 3
+        НГТУ, ФБ, Лабораторная работа 6
     </header>
 
     <main>
@@ -129,7 +165,13 @@
             С. Если число меньше задуманного введите число поменьше <br>
             D. Если число больше задуманного введите число побольше <br>
             E. Если захотите сыграть еще нажмите на кнопку сыграть еще раз
+        </div> 
+        
+        <div class="color" ondblclick="changecolor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
+
     </main>
 
     <footer>
