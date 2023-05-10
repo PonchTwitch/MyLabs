@@ -48,6 +48,17 @@
         cursor: pointer;
         position: relative;
     }
+    .expblock {
+        color: yellow;
+        background-color: green;
+        border: 2px solid;
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        left: 0%;
+        cursor: pointer;
+        position: relative;
+    }
 </style>
 <script>
     let number;
@@ -130,14 +141,28 @@
     function moveBlock(div) {
         if (div.style.left == '0%') {
             div.style.left = '90%';
-            div.style.transition = '4s'
-            div.style.transform = 'rotate(4turn)'
+            div.style.transition = '4s';
+            div.style.transform = 'rotate(4turn)';
         }
 
         else {
             div.style.left = '0%';
-            div.style.transition = '4s'
-            div.style.transform = 'rotate(0turn)'
+            div.style.transition = '4s';
+            div.style.transform = 'rotate(0turn)';
+        }
+    }
+    function expanBlock(div) {
+        let width = parseInt(div.style.width);
+        if (isNaN(width)) {
+            width = 50;
+        }
+        if (width < 1000) {
+            width = width + 50;
+            div.style.width = width + 'px';
+        }
+        else {
+            width = width - 900;
+            div.style.width = width + 'px';
         }
     }
 </script>
@@ -199,6 +224,10 @@
 
         <div class="mblock" onclick="moveBlock(this)">
             Щёлкни меня
+        </div>
+
+        <div class="expblock" onclick="expanBlock(this)">
+            Меня тоже
         </div>
 
     </main>
