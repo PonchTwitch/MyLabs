@@ -44,9 +44,9 @@
         width: 150px;
         padding: 10px;
         text-align: center;
-        margin-left: -20px;
+        left: 0%;
         cursor: pointer;
-        transition: left .2s linear;
+        position: relative;
     }
 </style>
 <script>
@@ -127,9 +127,18 @@
             div.style.color = 'black'
         }
     }
-    function moveBlock() {
-        let block = document.getElementsByClassName('mblock')
-        block.style.right = 100 + "px";
+    function moveBlock(div) {
+        if (div.style.left == '0%') {
+            div.style.left = '90%';
+            div.style.transition = '4s'
+            div.style.transform = 'rotate(4turn)'
+        }
+
+        else {
+            div.style.left = '0%';
+            div.style.transition = '4s'
+            div.style.transform = 'rotate(0turn)'
+        }
     }
 </script>
 </head>
@@ -188,7 +197,7 @@
             Сделайте двойной щелчок, чтобы сменить.
         </div>
 
-        <div class="mblock" onclick="moveBlock()">
+        <div class="mblock" onclick="moveBlock(this)">
             Щёлкни меня
         </div>
 
