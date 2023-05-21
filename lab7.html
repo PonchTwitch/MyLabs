@@ -17,6 +17,17 @@
             }
         }
 
+        function addTransparentBlocks() {
+            let tblocks = document.getElementById("transparent-blocks");
+            for(let i = 0; i < 10; i++) {
+                let tblock = document.createElement('div');
+                tblock.innerHTML = 'Блок №' + (i+1);
+                tblock.style.opacity = i/10;
+
+                tblocks.appendChild(tblock);
+            }
+        }
+
         function showExchange () {
             let exchange = [70.5174, 70.1227, 70.0414, 70.3847, 70.5991,
                             70.8924, 71.5763, 72.8949, 72.7923, 73.6307];
@@ -51,6 +62,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
     </main>
 
     <footer>
