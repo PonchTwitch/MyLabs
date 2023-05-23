@@ -87,6 +87,40 @@
                 newTable.appendChild(newTr)
             }
         }
+
+        function showCurs() {
+
+            let curs = [377.5, 270, 376.5, 250.9, 297, 356.9, 371.2, 476, 499.4, 562.9, 653.7, 565.3];
+            let date = ['01.06.2022', '01.07.2022', '01.08.2022', '01.09.2022', '01.10.2022', '01.11.2022', '01.12.2022', '01.01.2023',
+            '01.02.2023', '01.03.2023', '01.04.2023', '01.05.2023'];
+            let cursTable = document.getElementById('TableCurs');
+
+            for (let i = 0; i<curs.length; i++) {
+                let tr = document.createElement('tr');
+                let dateTd = document.createElement('td');
+                let cursTd = document.createElement('td');
+                let newTd = document.createElement('td');
+                dateTd.innerHTML = date[i];
+                cursTd.innerHTML = curs[i];
+                newTd.innerHTML = (curs[i] - curs[i-1]).toFixed(2);
+                tr.appendChild(dateTd);
+                tr.appendChild(cursTd);
+                tr.appendChild(newTd);
+                cursTable.appendChild(tr);
+            }
+
+            let sum = 0;
+            for (let i = 0; i<curs.length; i++) {
+                sum = sum + curs[i];
+            }
+            let average = sum / curs.length;
+            document.getElementById('middlenum').innerHTML = 'Среднее значение: ' + average;
+
+            let maxCurs = Math.max(...curs);
+            let minCurs = Math.min(...curs);
+            document.getElementById('max').innerHTML = 'Максимльное значение: ' + maxCurs;
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + minCurs;
+        }
     </script>
 </head>
 
@@ -121,10 +155,20 @@
 
         </div>
 
+        <div id="companycurs">
+
+            <button id="curs" onclick="showCurs()">Курс акций Полиметалл</button>
+            <table border="1" id="TableCurs"></table>
+            <div id="middlenum"></div>
+            <div id="max"></div>
+            <div id="min"></div>
+
+        </div>
+
     </main>
 
     <footer>
-        &copy; Юнус Салманов, ФБИ-13, 2 курс, 2023
+        &copy; Юнус Салманов, ФБИ-13, 2 курс, 2022
     </footer>
 </body>
 </html>
