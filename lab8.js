@@ -28,3 +28,10 @@ function clean() {
     document.querySelector('input[type=date]').value = "";
     document.getElementById('birthday').hidden = true;
 }
+
+function showTime() {
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(showTime, 1000);
